@@ -72,3 +72,97 @@ if (document.readyState === 'loading') {
 } else {
   enhanceImageSizes();
 }
+
+(function () {
+    const PAGE_SELECTOR = '[data-testid="album-page"], [data-testid="playlist-page"]';
+    const WRAP_SELECTOR = '.main-entityHeader-image';
+
+    let currentWrap = null;
+    let imgObserver = null;
+    let rafID = null;
+
+    function applyGlow(wrap) {
+        if (!wrap) return;
+
+        // Ensure the wrapper has the class immediately
+        wrap.classList.add("glow-wrap");
+
+        // Try to read the image src if available
+        const img = wrap.querySelector("img[src]");
+        if (!img) return;
+
+        const src = img.getAttribute("src");
+        if (!src) return;
+
+        wrap.style.setProperty("--glow-img", `url("${src.replace(/"/g, '\\"')}")`);
+    }
+
+    function watchImage(wrap) {
+        if (!wrap) return;
+
+        const img = wrap.querySelector("img");
+        if (!img) return;
+
+        // Observe image src changes (Spotify lazy loads and swaps images)
+        imgObserver = new MutationObserver(mutations => {
+            for (const m of mutations) {
+                if (m.type === "attributes" && (m.attributeName === "src" || m.attributeName === "srcset")) {
+                    applyGlow(wrap);
+                }
+            }
+        });
+
+        imgObserver.observe(img, { attributes: true, attributeFilter: ["src", "srcset"] });
+    }
+
+    function clearPrevious() {
+        if (currentWrap) {
+            currentWrap.classList.remove("glow-wrap");
+            currentWrap.style.removeProperty("--glow-img");
+        }
+        if (imgObserver) {
+            imgObserver.disconnect();
+            imgObserver = null;
+        }
+        currentWrap = null;
+    }
+
+    function checkAlbum() {
+        const page = document.querySelector(PAGE_SELECTOR);
+        if (!page) {
+            clearPrevious();
+            return;
+        }
+
+        const wrap = page.querySelector(WRAP_SELECTOR);
+        if (!wrap) {
+            clearPrevious();
+            return;
+        }
+
+        // If same wrapper, nothing to update
+        if (wrap === currentWrap) return;
+
+        // Switch to new wrapper
+        clearPrevious();
+        currentWrap = wrap;
+
+        // Apply glow immediately — BEFORE image loads
+        applyGlow(currentWrap);
+
+        // Watch for changes to the image inside
+        watchImage(currentWrap);
+    }
+
+    // Mutation observer → triggers checkAlbum on every DOM change
+    const globalObs = new MutationObserver(() => {
+        if (rafID) cancelAnimationFrame(rafID);
+        rafID = requestAnimationFrame(checkAlbum); // instant reaction
+    });
+
+    globalObs.observe(document.body, { childList: true, subtree: true });
+
+    // Initial run
+    checkAlbum();
+
+})();
