@@ -1,3 +1,61 @@
+.VZpSxFV1mVKehHTF1r9W{
+height:unset;}
+
+.GenericModal__overlay{
+background-color: rgb(0 0 0 / 40%);
+    backdrop-filter: blur(20px);
+}
+
+[id="search-modal-listbox"]{
+  scrollbar-width: none; 
+  padding: 0px;
+}
+#search-modal-listbox::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.jX1eb5CcZMAuXo_wmZI0, .yOSFN8gjw7LPo74pYe_g, .mWktZnvirv5K8ssiI4vC {
+  background-color: #585858db;
+  border-radius: 15px;
+  border: 2px solid #808080a3;
+}
+/*search icon color and text*/
+.qSZ_ggNRWVfmr9V3H2Pw, [data-testid="search-modal-input"]{color:white!important;}
+
+/*hide button shortcuts*/
+.iIaWJ3qSDLsKHwNCvv_g{
+  display:none;}
+
+  .VZpSxFV1mVKehHTF1r9W{
+    zoom: 1.25;
+    max-width: 526px;
+    max-height: 600px;
+  }
+
+
+.ZuOMABESRg0Bpv8S9642{
+  background-color:unset;}
+
+
+/*Make top artist songs bigger*/
+.fNzI6FqqYnAGcGmJjQRG{
+  zoom:1.1;}
+
+
+/*Hide see more*/
+.NIccMWgYS0OibP_70DRO{
+  display:none;
+}
+
+/*Hide about artist on page*/
+.main-gridContainer-gridContainer:has(.iFZMKULilfEIXBIuSDJW){
+  display:none;
+}
+
+.ZuOMABESRg0Bpv8S9642{
+    padding: 0px;}
+
 /*Hide artist page artist picture overlay*/
 .XR9tiExSLOuxgWTKxzse.ZLQMyiECjwh0Fat0ymny{
   display:none;
@@ -32,9 +90,9 @@
   background: rgb(255 255 255 / 9%);
   border-radius: 11px;
   z-index: -1;
-  width: 107%;
+  width: 105%;
   height: 66px;
-  left: -11px;
+  left: -6px;
   top: -2px;
   outline: 2px solid hsl(0deg 0% 48.21% / 45%);
 }
@@ -267,7 +325,9 @@ grid-template-rows: auto auto;}
 grid-row: 1;
 grid-column: 2;
 margin-top: 10px;
-margin-bottom: 8px;}
+margin-bottom: 8px;
+scale:1.1;}
+
 
 .playback-bar {
 grid-row: 2;
@@ -286,7 +346,8 @@ grid-column: 2;
 .main-yourLibraryX-library .main-yourLibraryX-collapseButton,
 .main-yourLibraryX-library .x-filterBox-filterInputContainer,
 .main-yourLibraryX-library [aria-controls="sort-and-view-picker"],
-.main-yourLibraryX-library .main-gridContainer-gridContainer > *{
+.main-yourLibraryX-library .main-gridContainer-gridContainer > *,
+.main-yourLibraryX-libraryRootlist.G4x1juhr8jVza8dirSUd > presentation *{
 -webkit-app-region: no-drag;}
   
   
@@ -351,14 +412,18 @@ background-color:#363636;}
 .main-globalNav-searchInputContainer:hover .TTmGm8qVTZIyhkzEGOqr{
 color:#fa586a;}
   
-  
+
 /*Improve scrollbar*/
-.os-scrollbar-handle{
+.os-scrollbar-handle, ::-webkit-scrollbar{
 width:80%!important;
 height:20%!important;
 margin-right:8px;
 border-radius:15px !important;}
-  
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0px;
+}
   
   
 /*Move play bar to the top*/
@@ -1699,8 +1764,9 @@ background-color:unset;
   
   
 [data-test-uri*="spotify:artist"] [aria-label="Fans also like"] .main-shelf-shelfGrid{
-column-gap:20px;
---min-column-width: 150px!important;}
+  column-gap: 20px;
+  --min-column-width: 160px !important;
+  zoom: 0.9;}
   
   
 [data-test-uri*="spotify:artist"] .YO0Nd3lMQrVPmjcdqV8p .main-trackList-rowSectionStart > img{
@@ -2702,18 +2768,6 @@ transition: none!important;}
 .main-nowPlayingWidget-nowPlaying .cover-art{height:56.5px;width:56.5px;}
   
  
-[role="dialog"] > div {
---background-base: #393939c4;
-backdrop-filter: blur(90px);
-border-radius: 30px;
-padding-left:0px;
-padding-right:0px;
-padding-bottom:5px;
-}
-  
-[role="dialog"] [data-encore-id="text"]{
-font-weight:300; color:white;
-}
   
 .main-confirmDialog-buttonContainer {
 gap: 66px;
