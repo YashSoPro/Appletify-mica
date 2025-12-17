@@ -1,3 +1,17 @@
+.main-view-container__scroll-node-child:has(.marketplace-header){
+  padding-inline:40px;
+}
+.NmDvKwRDGCojAFsFCOu1 > svg{display:none;}
+
+.h19n3ltPfQaq7keXnVGg{
+  padding-bottom:unset;
+  margin-bottom:40px;
+}
+.IEulmRakQT_FgH43ov2a{display:none;}
+
+.main-contextMenu-menuItemLabel, .NmDvKwRDGCojAFsFCOu1{
+  zoom:1.1;
+}
 
 
 /*Pop-up search bar, sorted by DOM*/
@@ -50,6 +64,7 @@ border-radius:12px;
 /*Shortcut bar*/
 .iIaWJ3qSDLsKHwNCvv_g{
   padding:10px;
+   padding-inline: 18px;
 }
 
 .jX1eb5CcZMAuXo_wmZI0:has(._7KcNGw4aZIGWk4fJvZS0){display:none;}
@@ -80,7 +95,7 @@ border-radius:12px;
 
 
 /*Make top artist songs bigger*/
-.fNzI6FqqYnAGcGmJjQRG{
+[data-test-uri^="spotify:artist:"]  .fNzI6FqqYnAGcGmJjQRG{
   zoom:1.1;}
 
 
@@ -291,7 +306,10 @@ grid-template: "title badges" / auto 1fr;
 
 /*Hide artist underneath track*/
 
-.ET4SVjxyjH4WkA3kSo5G{display:none;}
+.ET4SVjxyjH4WkA3kSo5G{position: absolute;
+  position: absolute;
+  left: 123%;
+  white-space: nowrap;}
 /*New version*/
 /*Fix playbar overflow*/
 .Root__now-playing-bar {
@@ -317,8 +335,6 @@ background-color: #d60017;
 }
 
 
-
-
 /*Album page make track text time better*/
 .Q4mk1oUBywa1PuZZZ0Mr{
 color: rgba(255, 255, 255, 0.64);
@@ -330,7 +346,7 @@ color: rgba(255, 255, 255, 0.64);
 .progress-bar__slider{display:none!important;}
 
 /*Hide notifications and friend activity buttons*/
-.YaU17q8G6eTc2eoKRwnL.main-actionButtons{visibility:hidden;}
+.YaU17q8G6eTc2eoKRwnL.main-actionButtons{display:none;}
 
 
 /*Hide leftmost undo/forward box space*/
@@ -817,7 +833,7 @@ zoom:1.2;}
   /*Alternating gray background*/
   [data-testid="album-page"] .main-rootlist-wrapper > div:nth-child(2) > :nth-child(odd){
     background-color:#ffffff05;
-    border-radius:8px;
+    border-radius:12px;
   }
     
   /*Hover play button*/
@@ -879,7 +895,7 @@ zoom:1.2;}
     
   /*Round the hover shape*/  
   .main-trackList-trackListRow{
-  border-radius:8px!important;}
+  border-radius:12px!important;}
     
     
   [data-testid="album-page"] .main-entityHeader-headerText .e-9890-text[data-separator="true"]{display:none;}
@@ -959,7 +975,8 @@ border-radius: 13px;}
 margin-bottom:180px;}
   
 [data-testid="playlist-page"] .main-entityHeader-container{
-max-width:95%;}
+max-width:95%;
+margin-bottom: 29px;}
   
 [data-testid="playlist-page"] .main-entityHeader-creatorWrapper figure{display:none;}
   
@@ -1005,7 +1022,6 @@ display:none;
   
   
 [data-testid="playlist-page"] .main-trackList-trackListHeader{
-margin-top: 24px;
 margin-bottom: 5px;
 position: static;
 }
@@ -1054,9 +1070,10 @@ display:block; z-index:99;
 }
   
   
-.playlist-playlist-playlistContent > .main-useDropTarget-base > .contentSpacing{
+[data-testid="playlist-page"] > .contentSpacing, .playlist-playlist-playlistContent > .main-useDropTarget-base > .contentSpacing{
   zoom:1.12;}
   
+
 
 .artist-popularTrackList-seeMore {
 display:none;
@@ -1079,10 +1096,10 @@ margin-right:20px;
 }
     
 [data-testid="playlist-page"] .playlist-playlist-playlistContent .mpdgC9UTkN5_fMm1pFiz{
-  position: absolute;
-  left: 450px;
-  right: 60px;
-  top: -80px;
+    position: absolute;
+    left: 490px;
+    right: 60px;
+    top: 394px;
 }
 
 [data-testid="playlist-page"] > .mpdgC9UTkN5_fMm1pFiz{
@@ -1160,7 +1177,7 @@ padding-inline-end: 8px;
 [data-testid="playlist-page"] .main-trackList-rowSectionVariable[aria-colindex="3"] {
 position: absolute;
 margin-top: 9px;
-left: 48%;
+left: 44%;
 }
 
 .playlist-playlist-actionBarBackground-background{display:none;}
@@ -1599,7 +1616,8 @@ zoom:1.3;}
   transform: translate(0px, -12px);
   transform-origin: center;
   stroke: currentColor;
-  stroke-width: 0.01;}
+  stroke-width: 0.01;
+  color:#fa586a;}
 [data-testid="now-playing-bar"] [aria-label*="Disable Shuffle for"] span svg {
   overflow: visible; 
   width: 22px; 
@@ -1755,7 +1773,8 @@ z-index: -1;
 }
   
 [placeholder="What do you want to play?"]{
-text-align:center;
+  margin-left: 10px;
+  zoom: 1.2;
 }
   
 
@@ -2092,7 +2111,7 @@ margin-bottom: 11px;}
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton span span svg path{
 fill:white;}
   
-[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton > button ]{scale:0.9;}
+[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton > button {scale:0.9;}
   
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton span span svg{
   scale:1.4;
@@ -2262,26 +2281,7 @@ background-color:#a30012;
 background-color:unset;
 }
   
-.Root__nav-bar .N9r2VuXMBlhRSVF5dCek [data-encore-id="buttonTertiary"]:has(.main-avatar-avatar){
-scale:1.3;
-}
-  
-.Root__nav-bar .N9r2VuXMBlhRSVF5dCek [data-encore-id="buttonTertiary"]:has(.main-avatar-avatar) img{
-scale:1.3;visibility:hidden;
-}
-  
-.Root__nav-bar .N9r2VuXMBlhRSVF5dCek [data-encore-id="buttonTertiary"]:has(.main-avatar-avatar) div:before{
-  content: "";
-  display: inline-block;
-  width: 27px;
-  height: 27px;
-  fill:#fa586a;
-  transform:scale(1);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'><path d='M 23.33203125,23.052734375 C 28.037109375,23.052734375 31.625,27.0703125 31.625,32.3125 C 31.625,37.2109375 27.951171875,41.37890625 23.33203125,41.37890625 C 18.69140625,41.37890625 14.974609375,37.2109375 15.017578125,32.3125 C 15.017578125,27.0703125 18.60546875,23.052734375 23.33203125,23.052734375 Z M 8.658203125,3.73828125 L 37.876953125,3.73828125 C 39.875,3.73828125 41.056640625,4.33984375 41.056640625,6.1875 C 41.056640625,11.64453125 34.24609375,19.185546875 23.267578125,19.185546875 C 12.310546875,19.185546875 5.478515625,11.64453125 5.478515625,6.1875 C 5.478515625,4.33984375 6.66015625,3.73828125 8.658203125,3.73828125 Z' stroke='%23fa586a' fill='%23fa586a' fill-opacity='1.0' stroke-width='1.0'/></svg>");
-  background-repeat: no-repeat;
-  transform: scaleY(-1);
-  background-size: contain;
-}
+
   
     
 .main-yourLibraryX-libraryContainer.YourLibraryX:not(.sikBfynL1Y6I25nVpbAg) > div:nth-child(2) > header > div > div.main-yourLibraryX-collapseButton > div > button > span > svg > path:nth-child(1){
@@ -2349,7 +2349,7 @@ display: block;
 }
   
 .marketplace-tabBar.marketplace-tabBar-nav{
-margin-top:20px;
+margin-top:34px;
 }
   
 .main-navBar-mainNav {border-right: 1px solid hsla(0, 0%, 100%, .1);}
@@ -2418,33 +2418,6 @@ color:rgb(176,176,176);}
   
 
   
-/*Remove homepage*/
-.T0fKO6B7LQSCE_VaSM1P:has([data-testid="home-page"]){
-position: relative;
-width: 100%;
-height: 100vh; 
-overflow: hidden;
-}
-  
-.T0fKO6B7LQSCE_VaSM1P:has([data-testid="home-page"]):before {
-content: "";
-display: block;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 1960px;
-height: 1100px;
-background-image: url('https://www.apple.com/newsroom/images/product/services/standard/Apple-Music-100-million-songs-hero_big.jpg.slideshow-large_2x.jpg');
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-}
-  
-.T0fKO6B7LQSCE_VaSM1P:has([data-testid="home-page"]) * {
-display: none;
-}
-  
   
   
 /*Default grid view play button*/
@@ -2491,7 +2464,8 @@ background:rgba(38,38,38,0);
 }
    
  
-[data-encore-id="buttonTertiary"]:has(.main-avatar-avatar){background-color:Transparent!important;}
+[data-encore-id="buttonTertiary"]:has(.main-avatar-avatar){zoom: 1.2;
+margin-right: 19px;}
 
   
 #context-menu [role="menu"]{
@@ -2645,10 +2619,6 @@ opacity:1;}
 margin-top: 100px;
 padding-bottom: 0px;
 background-color:unset;
-}
-  
-.marketplace-tabBar.marketplace-tabBar-nav{
-margin-top: 26px;
 }
   
   
@@ -2903,3 +2873,4 @@ filter: hue-rotate(-142deg);}
 
 .main-trackList-rowSectionEnd [aria-label="Add to Liked Songs"]{
   display:none;}
+
