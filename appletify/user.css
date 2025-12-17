@@ -1,41 +1,82 @@
-.VZpSxFV1mVKehHTF1r9W{
-height:unset;}
+
+
+/*Pop-up search bar, sorted by DOM*/
 
 .GenericModal__overlay{
-background-color: rgb(0 0 0 / 40%);
-    backdrop-filter: blur(20px);
+  background-color: rgb(0 0 0 / 10%);
 }
 
+
+.VZpSxFV1mVKehHTF1r9W:has([data-testid="search-modal-results"]) {
+  margin-top: 240px;
+}
+
+.VZpSxFV1mVKehHTF1r9W{
+height:unset;
+box-shadow:
+0 60px 120px rgba(0,0,0,.55),
+0 30px 60px rgba(0,0,0,.4),
+inset 0 1px 1px rgba(255,255,255,.08);
+border-radius: 12px;
+backdrop-filter: blur(45px);}
+
+.VZpSxFV1mVKehHTF1r9W{
+  zoom: 1.25;
+  max-width: 578px;
+  max-height: 600px;
+}
+
+/*Search bar only*/
+.ZuOMABESRg0Bpv8S9642{
+  background-color:unset;
+    padding: 0px;}
+
+/*Search bar and results*/
+.jX1eb5CcZMAuXo_wmZI0, .yOSFN8gjw7LPo74pYe_g, .mWktZnvirv5K8ssiI4vC, .iIaWJ3qSDLsKHwNCvv_g {
+  background-color: rgb(46 46 49 / 45%);
+  border: 1px solid rgba(255,255,255,.12);
+}
+.VZpSxFV1mVKehHTF1r9W:has([data-testid="search-modal-results"]) .mWktZnvirv5K8ssiI4vC{  border-bottom: none;  border-radius: 12px 12px 0 0;}
+
+.mWktZnvirv5K8ssiI4vC{
+border-radius:12px;
+  height: 54px;
+}
+
+.CqXpLitKxRFvrULhC2kW:has([data-testid="search-modal-results"]).mWktZnvirv5K8ssiI4vC{
+  border-radius:12px;
+}
+
+/*Shortcut bar*/
+.iIaWJ3qSDLsKHwNCvv_g{
+  padding:10px;
+}
+
+.jX1eb5CcZMAuXo_wmZI0:has(._7KcNGw4aZIGWk4fJvZS0){display:none;}
+
+/*Results*/
 [id="search-modal-listbox"]{
   scrollbar-width: none; 
-  padding: 0px;
+  padding: 3px;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
 }
+[id="search-modal-listbox"] > a{
+  border-radius:15px;}
+
 #search-modal-listbox::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.jX1eb5CcZMAuXo_wmZI0, .yOSFN8gjw7LPo74pYe_g, .mWktZnvirv5K8ssiI4vC {
-  background-color: #585858db;
-  border-radius: 15px;
-  border: 2px solid #808080a3;
+/*Round artist images*/
+.gmNQCzeK5b2wiebA87rg{
+  border-radius:100%!important;
 }
+
 /*search icon color and text*/
-.qSZ_ggNRWVfmr9V3H2Pw, [data-testid="search-modal-input"]{color:white!important;}
-
-/*hide button shortcuts*/
-.iIaWJ3qSDLsKHwNCvv_g{
-  display:none;}
-
-  .VZpSxFV1mVKehHTF1r9W{
-    zoom: 1.25;
-    max-width: 526px;
-    max-height: 600px;
-  }
-
-
-.ZuOMABESRg0Bpv8S9642{
-  background-color:unset;}
+.qSZ_ggNRWVfmr9V3H2Pw{color: rgb(254 254 254 / 64%)!important;}
+[data-testid="search-modal-input"]{color:white!important;}
 
 
 /*Make top artist songs bigger*/
@@ -53,8 +94,7 @@ background-color: rgb(0 0 0 / 40%);
   display:none;
 }
 
-.ZuOMABESRg0Bpv8S9642{
-    padding: 0px;}
+
 
 /*Hide artist page artist picture overlay*/
 .XR9tiExSLOuxgWTKxzse.ZLQMyiECjwh0Fat0ymny{
@@ -62,7 +102,7 @@ background-color: rgb(0 0 0 / 40%);
 }
 
 .XR9tiExSLOuxgWTKxzse.hZOTxnfvrXvtxfUWC4Sp{
-  zoom: 112%;
+  zoom: 113%;
 }
 
 .main-entityHeader-container.DFuKwT5bvhKZoYr2gfZe{
@@ -91,7 +131,7 @@ background-color: rgb(0 0 0 / 40%);
   border-radius: 11px;
   z-index: -1;
   width: 105%;
-  height: 66px;
+  height: 109%;
   left: -6px;
   top: -2px;
   outline: 2px solid hsl(0deg 0% 48.21% / 45%);
@@ -271,6 +311,13 @@ background-color: #d60017;
   padding-right: 9px;
   scale: 1.2;
 }
+
+.main-trackList-trackListRow:hover:not(.main-trackList-disabled) .zeEKLLKAQgCfbY6qzb9A{
+  color:unset;
+}
+
+
+
 
 /*Album page make track text time better*/
 .Q4mk1oUBywa1PuZZZ0Mr{
@@ -1296,9 +1343,9 @@ box-shadow:inset 0 0 0 1px rgba(var(--spice-rgb-selected-row), .1);
   
   
 .Root__nav-bar .os-scrollbar-handle{
-width:30%!important;
+width:40%!important;
 border-radius:15px !important;
-opacity:0.75;
+opacity:0.85;
 }
   
 .b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar, .b7r2WRiu5f9Q99qmyreh:hover .main-topBar-searchBar, .b7r2WRiu5f9Q99qmyreh .main-topBar-searchBar:focus{
@@ -1748,6 +1795,9 @@ scale:1.2;}
 transform:none;
 transition: none;
 }
+
+.main-trackList-trackListRowGrid.MxoETbR0GSKhCd1hp6Np .zeEKLLKAQgCfbY6qzb9A{
+  color:white;}
   
 .main-card-PlayButtonContainer button > span{
 background-color:#00000080!important;
@@ -1834,11 +1884,11 @@ margin-bottom:80px;
 margin-left:20px;
 }
    
-  
-[data-test-uri*="spotify:artist"] [aria-label="Discography"] div:nth-child(3){
---min-column-width:250px!important;
+  [data-test-uri*="spotify:artist"] [aria-label="Discography"] div:nth-child(3){
+--min-column-width:240px!important;
 }
    
+
    
 [data-test-uri*="spotify:artist"] > div > .YO0Nd3lMQrVPmjcdqV8p > .contentSpacing > div:has(.artist-artistOnTour-onTourShelfGrid){
 display:none;}
@@ -1994,15 +2044,15 @@ content-visibility: visible;
   
   
 [data-test-uri*="spotify:artist"] > div > div.YO0Nd3lMQrVPmjcdqV8p > div.contentSpacing > div:nth-child(1){
-margin-right:32vw;
+  margin-left: 27vw;
 }
   
 [data-test-uri*="spotify:artist"] .YO0Nd3lMQrVPmjcdqV8p > div.contentSpacing > [aria-label="Discography"] > .main-gridContainer-gridContainer > div:nth-child(1){
-right: 6vw;
-z-index: 9;
-top: -408px;
-position: absolute;
-width: 275px;
+  left: 29px;
+  z-index: 9;
+  top: -375px;
+  position: absolute;
+  width: 275px;
 }
   
 /*Make highlighted release title bigger*/
@@ -2039,16 +2089,16 @@ display:none;
 margin-left: 103px !important;
 margin-bottom: 11px;}
   
-[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label="Play"] span span svg path{
+[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton span span svg path{
 fill:white;}
   
-[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label="Play"]{scale:0.9;}
+[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton > button ]{scale:0.9;}
   
-[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label="Play"] span span svg{
+[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton span span svg{
   scale:1.4;
 }
   
-[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label="Play"] span{
+[data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow .main-playButton-PlayButton span{
 background-color:#Fa586a;}
   
 [data-test-uri*="spotify:artist"] .main-actionBar-ActionBarRow [aria-label*="More options for"]{
@@ -2661,7 +2711,7 @@ display:none;}
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-            background-image: url("https://github.com/raysin1/Appletify/blob/main/screenshots/liked%20songs.jpg?raw=true");
+ background-image: url("https://github.com/raysin1/Appletify/blob/main/screenshots/liked%20songs.jpg?raw=true");
 }}}
   
 
