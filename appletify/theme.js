@@ -169,10 +169,3 @@ if (document.readyState === 'loading') {
 
 
 
-//Remove spellcheck
-document.addEventListener("focusin", e => {
-  const t = e.target;
-  if (t && (t.isContentEditable || t.getAttribute?.("contenteditable") === "true")) {
-    t.setAttribute("spellcheck", "false");
-  }
-});
