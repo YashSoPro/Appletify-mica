@@ -3574,3 +3574,16 @@ margin-top: 5px;
 &:has(> img[src^="https://misc.scdn.co/liked-songs/liked-songs"]) {
 
 }}
+/* Mica / Acrylic compatibility */
+.Root__nav-bar,
+.Root__main-view,
+.main-view-container {
+  background: transparent !important;
+}
+
+/* Apple Music–ish softness */
+.main-view-container {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+
